@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+      <section action="">
+            <input type="text" id="pn">
+            <button onclick="  regexFunc()">Submit</button>
+            <div id="errorMessage"></div>
+      </section>
+<form action="" class="is-invalid">
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text">
+</form>
+
+      <script>
+            const regexFunc = () => {
+            let regexPhone = /^[0-9]{11}$/;
+            let phoneNumber = pn.value;
+                  if (regexPhone.test(phoneNumber) == false)
+                  {
+
+                        errorMessage.style.color = "red"
+                        errorMessage.innerText = "Enter Eleven Characters";
+                  }
+                  else {
+                        errorMessage.style.color = "green"
+                        errorMessage.innerText = "Correct!"
+                  }
+                  console.log((regexPhone.test(phoneNumber)));
+            }
+            regexFunc()
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>dropPen
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+
+</head>
+<body class="bg-dark">
+    <div class="container-fluid p-4 col-md-8">
+          <canvas id="canvas" ></canvas>
+          <div class="parent ">
+                <button onclick="clearCanvas()" class="btn text-white btn-primary fw-bold">Clear</button>
+                <button onclick="dropPen()" class="btn text-white btn-warning fw-bold">Drop Pen</button>
+                <button onclick="circleButton()" class="btn text-white btn-primary fw-bold">Circle</button>
+                <button onclick="lineButton()" class="btn text-white btn-warning fw-bold ">Line</button>
+                <button class="btn text-white btn-primary fw-bold" id="freeForm" onclick="freeButton()">Free-Form</button>
+                <input oninput="penColor = this.value" type="color">
+                <input oninput="penWidth = this.value" type="range" min="1" max="100">
+          </div>
+      </div>
+</body>
+<script src="canvasAssignment.js" defer></script>
+<script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+</html>
